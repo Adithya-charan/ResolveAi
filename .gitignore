@@ -30,8 +30,27 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files — block secrets, allow example
+.env
+.env.local
+.env.*.local
+backend/.env
+backend/.env.local
+!.env.example
+!backend/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+*.egg-info/
+dist/
+*.pyc
+
+# Backend
+backend/.venv/
 
 # vercel
 .vercel
